@@ -57,10 +57,7 @@ public class ClientHandler {
                             sendMsg(Command.END);
                             System.out.println("client disconnected");
                             break;
-                        } else if (str.startsWith(Command.PRVMSG)) {
-                            String[] token = str.split("\\s", 3);
-                            server.broadcastPrivateMsg(this, token[2], token[1]);
-                        } else {
+                        }  else {
                             server.broadcastMsg(this, str);
                         }
 
